@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -53,5 +55,42 @@ public class Main {
             System.out.print(index);
             index++;
         }while (index<10);
+
+        // Dernière partie importante : les conditions if/ if else
+        System.out.println("\n"); // petit retour a la ligne dans la console pour voir mieux ^^
+
+        if(index<10){ // la condition est entre ( )
+            System.out.println("index "+index+" est plus petit que 10");
+        } else {
+            System.out.println("index "+index+" est plus grand ou égal à 10");
+        }
+
+//        on peut y mettre autant de sous-condition que l'on veut :
+        Scanner scanner = new Scanner(System.in);                   // lecture de chiffres par la console
+
+        System.out.println("Saisir un chiffre entre 0 et 20 : ");
+        int nbreInput = scanner.nextInt();
+        if(nbreInput<0){
+            System.out.println("Le chiffre saisie est plus petit que 0, merci de recommencer : ");
+            nbreInput = scanner.nextInt();
+        }
+        if(nbreInput>20){
+            System.out.println("Le chiffre saisie est plus grand que 20, merci de recommencer : ");
+            nbreInput = scanner.nextInt();
+        }
+
+        if(nbreInput<3){ // la condition est entre ( )
+            System.out.println("index "+nbreInput+" est plus petit que 3");
+        } else if(nbreInput<5){
+            System.out.println("index "+nbreInput+" est plus petit que 5");
+        } else if(nbreInput<8){
+            System.out.println("index "+nbreInput+" est plus petit que 8");
+        } else if(nbreInput<13){
+            System.out.println("index "+nbreInput+" est plus petit que 13");
+        } else {
+            System.out.println("index "+nbreInput+" est plus grand ou égal à 13");
+        }
+
+        System.out.println("Merci pour cet algo de fou !");
     }
 }
